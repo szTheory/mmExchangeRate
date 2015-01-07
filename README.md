@@ -15,7 +15,7 @@ Before you try it, make sure you've install [elixir 1.*](http://elixir-lang.org/
 
 ##### To check today exchange rate
 
-	$ mmExchangeRate.today("currency") # default currency is usd if paramter is empty
+	$ mmExchangeRate.today("usd") # default currency is usd if paramter is empty
 
 ##### To calculate rate with today exchange rate
 
