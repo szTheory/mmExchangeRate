@@ -1,5 +1,19 @@
 defmodule MmExchangeRate do
-	use MmExchangeRate.HttpWrapper
+
+	use HTTPotion.Base
+
+	def process_url(url) do
+		"http://forex.cbm.gov.mm/api/" <> url			
+	end
+
+	def process_request_headers(headers) do
+		Dict.put headers, :"User-Agent", "mmexr-potion"
+	end
+
+	def process_response_body(body) do
+    	json = :jsx.decode(to_string(body), [{:labels, :binary}])
+    	Enum.map json, fn ({k, v}) -> { String.to_atom(k), v } end
+  	end
 
 	@doc """
   	Get available currency list
@@ -51,19 +65,3 @@ defmodule MmExchangeRate do
 	end
 end
 
-defmodule MmExchangeRate.HttpWrapper do
-	use HTTPotion.Base
-
-	def process_url(url) do
-		"http://forex.cbm.gov.mm/api/" <> url			
-	end
-
-	def process_request_headers(headers) do
-		Dict.put headers, :"User-Agent", "mmexr-potion"
-	end
-
-	def process_response_body(body) do
-    	json = :jsx.decode(to_string(body), [{:labels, :binary}])
-    	json2 = Enum.map json, fn ({k, v}) -> { String.to_atom(k), v } end
-  	end
-end
