@@ -24,5 +24,5 @@ Before you try it, make sure you've install [elixir 1.*](http://elixir-lang.org/
 
 ##### To check exchange rate history
 
-	$ mmExchangeRate.calculate("dd-mm-yyyy", "usd") # default currency is usd if paramter is empty	
+	$ mmExchangeRate.from("dd-mm-yyyy", "usd") # default currency is usd if paramter is empty	
 
