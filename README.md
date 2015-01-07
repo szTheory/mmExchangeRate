@@ -6,6 +6,7 @@ Before you try it, make sure you've install [elixir 1.*](http://elixir-lang.org/
 
 	$ git clone git@github.com:Arkar-Aung/mmExchangeRate.git
 	$ cd mmExchangeRate
+	$ mix deps.get
 	$ iex -S mix
 
 
