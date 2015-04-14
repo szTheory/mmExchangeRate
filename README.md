@@ -1,6 +1,6 @@
 # MmExchangeRate
 
-A simple exchange rate checker and calculator based on [Central Bank of Myanmar Api](http://forex.cbm.gov.mm/index.php/api) in elixir.
+A simple exchange rate checker and calculator based on [Central Bank of Myanmar Api](http://forex.cbm.gov.mm/index.php/api) in elixir. You can find [it](https://hex.pm/packages/mmExchangeRate) on hex.
 
 Before you try it, make sure you've install [elixir 1.*](http://elixir-lang.org/install.html)
 In mix.exs,
