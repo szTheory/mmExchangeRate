@@ -31,4 +31,13 @@ defmodule MmExchangeRate.Mixfile do
       {:jsx, "~> 2.4"}
     ]
   end
+
+  defp package do
+    [# These are the default files included in the package
+     files: ["lib", "priv", "mix.exs", "README.md", "LICENSE*", "license*"],
+     contributors: ["Arkar Aung"],
+     licenses: ["Apache 2.0"],
+     links: %{"GitHub" => "https://github.com/Arkar-Aung/mmExchangeRate",
+              "Docs" => "https://github.com/Arkar-Aung/mmExchangeRate"}]
+  end
 end
