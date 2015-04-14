@@ -3,11 +3,14 @@
 A simple exchange rate checker and calculator based on [Central Bank of Myanmar Api](http://forex.cbm.gov.mm/index.php/api) in elixir.
 
 Before you try it, make sure you've install [elixir 1.*](http://elixir-lang.org/install.html)
+In mix.exs,
 
-	$ git clone git@github.com:Arkar-Aung/mmExchangeRate.git
-	$ cd mmExchangeRate
-	$ mix deps.get
-	$ iex -S mix
+	defp deps do
+    	[
+      		{:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.0"},
+      		{:mmExchangeRate, "~> 0.0.1"}
+    	]
+  	end
 
 
 ##### To check available currency list

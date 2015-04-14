@@ -5,6 +5,8 @@ defmodule MmExchangeRate.Mixfile do
     [app: :mmExchangeRate,
      version: "0.0.1",
      elixir: "~> 1.0",
+     package: package,
+     description: description,
      deps: deps]
   end
 
@@ -13,6 +15,12 @@ defmodule MmExchangeRate.Mixfile do
   # Type `mix help compile.app` for more information
   def application do
     [applications: [:logger, :httpotion]]
+  end
+
+  defp description do
+    """
+    A simple exchange rate checker and calculator based on Central Bank of Myanmar Api.
+    """
   end
 
   # Dependencies can be Hex packages:
@@ -38,6 +46,6 @@ defmodule MmExchangeRate.Mixfile do
      contributors: ["Arkar Aung"],
      licenses: ["Apache 2.0"],
      links: %{"GitHub" => "https://github.com/Arkar-Aung/mmExchangeRate",
-              "Docs" => "https://github.com/Arkar-Aung/mmExchangeRate"}]
+              "Docs" => "https://github.com/Arkar-Aung/mmExchangeRate"}]     
   end
 end
