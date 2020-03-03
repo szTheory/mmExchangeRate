@@ -5,27 +5,37 @@ A simple exchange rate checker and calculator based on [Central Bank of Myanmar 
 Before you try it, make sure you've install [elixir 1.*](http://elixir-lang.org/install.html)
 In mix.exs,
 
-	defp deps do
-    	[
-      		{:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.0"},
-      		{:mmExchangeRate, "~> 0.0.1"}
-    	]
-  	end
+```elixir
+defp deps do
+  [
+    {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.0"},
+    {:mmExchangeRate, "~> 0.0.1"}
+  ]
+end
+```
 
 
 ##### To check available currency list
 
-	MmExchangeRate.currencies()
+```elixir
+MmExchangeRate.currencies()
+```
 
 ##### To check today exchange rate
 
-	MmExchangeRate.today("usd") # default currency is usd if paramter is empty
+```elixir
+MmExchangeRate.today("usd") # default currency is usd if paramter is empty
+```
 
 ##### To calculate rate with today exchange rate
 
-	MmExchangeRate.calculate(100, "usd") # default currency is usd if paramter is empty
+```elixir
+MmExchangeRate.calculate(100, "usd") # default currency is usd if paramter is empty
+```
 
 ##### To check exchange rate history
 
-	MmExchangeRate.from("dd-mm-yyyy", "usd") # default currency is usd if paramter is empty	
+```elixir
+MmExchangeRate.from("dd-mm-yyyy", "usd") # default currency is usd if paramter is empty	
+```
 
